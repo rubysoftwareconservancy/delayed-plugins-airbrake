@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# A simple shell-based provisioner for Vagrant.
+# 
+# Documentation: [Shell Provisioner](http://vagrantup.com/v1/docs/provisioners/shell.html)
+set -o errexit
+
+sudo apt-get update
+sudo apt-get install -y git-core make ruby1.9.1 ruby1.9.1-dev
+sudo gem install bundler
+cd /vagrant
+bundle install
