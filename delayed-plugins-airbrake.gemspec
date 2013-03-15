@@ -16,4 +16,8 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+
+  # Dependencies are not using versions so that there are few version conflicts for users.
+  gem.add_dependency('airbrake')
+  gem.add_dependency('delayed_job')
 end
