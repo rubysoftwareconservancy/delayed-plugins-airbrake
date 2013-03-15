@@ -20,4 +20,7 @@ Gem::Specification.new do |gem|
   # Dependencies are not using versions so that there are few version conflicts for users.
   gem.add_dependency('airbrake')
   gem.add_dependency('delayed_job')
+
+  gem.add_development_dependency('rake')
+  gem.add_development_dependency('rspec')
 end
