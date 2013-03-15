@@ -1,7 +1,7 @@
 module Delayed
   module Plugins
     module Airbrake
-      VERSION = "1.0.0.beta.3"
+      VERSION = '1.0.0'
     end
   end
 end
