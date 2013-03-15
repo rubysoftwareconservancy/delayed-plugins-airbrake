@@ -21,7 +21,7 @@ In a Rails project, this can be done in `config/initializers`.
 
 ## System Integration Testing
 
-A test class is provided:
+A test class is provided.  It can easily be run from your app's console, etc.
 
     Delayed::Plugins::Airbrake::Bomb.delay.blow_up
 
