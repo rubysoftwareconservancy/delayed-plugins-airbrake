@@ -15,7 +15,7 @@ Add this line to your application's Gemfile:
 Register the plugin like so:
 
     require 'delayed/plugins/airbrake'
-    Delayed::Worker.plugins << Delayed::Plugins::Airbrake
+    Delayed::Worker.plugins << Delayed::Plugins::Airbrake::Plugin
 
 In a Rails project, this can be done in `config/initializers`.
 
