@@ -1,6 +1,8 @@
 # Delayed::Plugins::Airbrake
 
-TODO: Write a gem description
+`delayed_job` exception notification with Airbrake
+
+Originally based on [this gist](https://gist.github.com/granth/2223758) and [this StackOverflow answer](http://stackoverflow.com/questions/12683364/how-to-make-delayed-job-notify-airbrake-when-an-actionmailer-runs-into-an-error).
 
 ## Installation
 
@@ -8,17 +10,14 @@ Add this line to your application's Gemfile:
 
     gem 'delayed-plugins-airbrake'
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install delayed-plugins-airbrake
-
 ## Usage
 
-TODO: Write usage instructions here
+Register the plugin like so:
+
+    require 'delayed/plugins/airbrake'
+    Delayed::Worker.plugins << Delayed::Plugins::Airbrake
+
+In a Rails project, this can be done in `config/initializers`.
 
 ## Contributing
 
