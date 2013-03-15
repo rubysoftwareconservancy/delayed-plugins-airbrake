@@ -19,6 +19,14 @@ Register the plugin like so:
 
 In a Rails project, this can be done in `config/initializers`.
 
+## System Integration Testing
+
+A test class is provided:
+
+    Delayed::Plugins::Airbrake::Bomb.delay.blow_up
+
+This raises an exception in `delayed_job` which should show up in Airbrake (if everything is set up correctly :) ).
+
 ## Contributing
 
 1. Fork it

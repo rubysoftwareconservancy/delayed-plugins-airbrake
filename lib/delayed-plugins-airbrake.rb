@@ -27,4 +27,11 @@ module Delayed::Plugins::Airbrake
       end
     end
   end
+
+  # This can be used to test that the plugin is working
+  class Bomb
+    def self.blow_up
+      raise 'Test from Delayed::Plugins::Airbrake::Bomb'
+    end
+  end
 end
