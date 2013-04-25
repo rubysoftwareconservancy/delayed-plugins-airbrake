@@ -1,5 +1,7 @@
 # Delayed::Plugins::Airbrake
 
+![Looking for maintainer](https://raw.github.com/benjaminoakes/delayed-plugins-airbrake/master/resources/looking-for-maintainer.png)
+
 `delayed_job` exception notification with Airbrake
 
 Originally based on [this gist](https://gist.github.com/granth/2223758) and [this StackOverflow answer](http://stackoverflow.com/questions/12683364/how-to-make-delayed-job-notify-airbrake-when-an-actionmailer-runs-into-an-error).
