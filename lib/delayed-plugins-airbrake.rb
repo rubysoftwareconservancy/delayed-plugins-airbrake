@@ -11,6 +11,7 @@ module Delayed::Plugins::Airbrake
         ::Airbrake.notify_or_ignore(
           :error_class   => error.class.name,
           :error_message => "#{error.class.name}: #{error.message}",
+          :backtrace     => error.backtrace,
           :parameters    => {
             :failed_job => job.inspect,
           }
