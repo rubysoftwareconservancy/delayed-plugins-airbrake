@@ -1,6 +1,6 @@
 # Delayed::Plugins::Airbrake
 
-![Looking for maintainer](https://raw.github.com/benjaminoakes/delayed-plugins-airbrake/master/resources/looking-for-maintainer.png)
+Currently maintained by [@ndbroadbent](https://github.com/ndbroadbent).  Many thanks!
 
 `delayed_job` exception notification with Airbrake
 
