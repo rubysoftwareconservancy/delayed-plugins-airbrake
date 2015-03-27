@@ -13,9 +13,7 @@ module Delayed::Plugins::Airbrake
           :error_message => "#{exception.class.name}: #{exception.message}",
           :backtrace     => exception.backtrace,
           :component     => 'DelayedJob Worker',
-          :parameters    => {
-            :failed_job => job.inspect
-          }
+          :parameters    => job.attributes
         )
         super if defined?(super)
       end
