@@ -8,7 +8,7 @@ module Delayed::Plugins::Airbrake
   class Plugin < ::Delayed::Plugin
     module Notify
       def error(job, exception)
-        ::Airbrake.notify(exception,
+        ::Airbrake.notify_or_ignore(exception,
           :error_class   => exception.class.name,
           :error_message => "#{exception.class.name}: #{exception.message}",
           :backtrace     => exception.backtrace,
