@@ -8,15 +8,17 @@ module Delayed::Plugins::Airbrake
   class Plugin < ::Delayed::Plugin
     module Notify
       def error(job, exception)
-        ::Airbrake.notify(exception,
-          :error_class   => exception.class.name,
-          :error_message => "#{exception.class.name}: #{exception.message}",
-          :backtrace     => exception.backtrace,
-          :component     => 'DelayedJob Worker',
-          :parameters    => {
-            :failed_job => job.inspect
-          }
-        )
+        if (job.attempts + 1) >= (job.max_attempts || Delayed::Worker.max_attempts)
+          ::Airbrake.notify(exception,
+            :error_class   => exception.class.name,
+            :error_message => "#{exception.class.name}: #{exception.message}",
+            :backtrace     => exception.backtrace,
+            :component     => 'DelayedJob Worker',
+            :parameters    => {
+              :failed_job => job.inspect
+            }
+          )
+        end
         super if defined?(super)
       end
     end
