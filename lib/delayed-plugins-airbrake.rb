@@ -8,6 +8,8 @@ module Delayed::Plugins::Airbrake
   class Plugin < ::Delayed::Plugin
     module Notify
       def error(job, exception)
+        return if defined?(super) # don't airbrake if custom handler defined 
+        
         if (job.attempts + 1) >= (job.max_attempts || Delayed::Worker.max_attempts)
           ::Airbrake.notify(exception,
             :error_class   => exception.class.name,
