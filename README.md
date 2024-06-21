@@ -1,7 +1,5 @@
 # Delayed::Plugins::Airbrake
 
-Currently maintained by [@ndbroadbent](https://github.com/ndbroadbent).  Many thanks!
-
 `delayed_job` exception notification with Airbrake
 
 Originally based on [this gist](https://gist.github.com/granth/2223758) and [this StackOverflow answer](http://stackoverflow.com/questions/12683364/how-to-make-delayed-job-notify-airbrake-when-an-actionmailer-runs-into-an-error).
