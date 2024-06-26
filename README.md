@@ -25,7 +25,7 @@ A test class is provided.  It can easily be run from your app's console, etc.
 
     Delayed::Plugins::Airbrake::Bomb.delay.blow_up
 
-This raises an exception in `delayed_job` which should show up in Airbrake (if everything is set up correctly :) ).
+This raises an exception in `delayed_job` which should show up in Airbrake (if everything is set up correctly 🙂).
 
 ## Contributing
 
